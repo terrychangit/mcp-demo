@@ -1,3 +1,5 @@
 mcp
 openai
 python-dotenv
+pytest
+pytest-asyncio
