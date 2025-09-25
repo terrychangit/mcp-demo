@@ -12,8 +12,10 @@ A robust demonstration of the Model Context Protocol (MCP) with a secure calcula
   - Power/Exponentiation (`power`)
 
 - **🤖 Intelligent Client**: Demonstrates MCP usage with two modes:
-  - **Basic Mode**: Direct tool invocation with validation
-  - **AI-Integrated Mode**: Natural language queries processed by Azure OpenAI with automatic tool calling
+  - **Basic Mode** (`basic_client_demo`): Direct tool invocation with validation
+  - **AI-Integrated Mode** (`ai_integrated_demo`): Natural language queries processed by Azure OpenAI with automatic tool calling
+
+  The AI-integrated demo represents the most practical MCP implementation, showcasing how AI models can safely and effectively use external tools through natural language interaction.
 
 - **🛡️ Security & Validation**:
   - Input size limits to prevent overflow/underflow
