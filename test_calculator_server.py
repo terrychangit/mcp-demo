@@ -9,11 +9,11 @@ class TestValidateNumber:
         assert validate_number(3.14, "test") == 3.14
 
     def test_invalid_string(self):
-        with pytest.raises(ValueError, match="test must be a number"):
+        with pytest.raises(ValueError, match=r"Parameter 'test' must be a number \(int or float\), but received str"):
             validate_number("not_a_number", "test")
 
     def test_invalid_list(self):
-        with pytest.raises(ValueError, match="test must be a number"):
+        with pytest.raises(ValueError, match=r"Parameter 'test' must be a number \(int or float\), but received list"):
             validate_number([1, 2, 3], "test")
 
 class TestAdd:

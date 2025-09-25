@@ -7,9 +7,16 @@ from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 from openai import AzureOpenAI
 
-# Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+# Configure logging with better formatting and file output
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('mcp_client.log'),
+        logging.StreamHandler()
+    ]
+)
+logger: logging.Logger = logging.getLogger(__name__)
 
 # Load environment variables
 load_dotenv()
